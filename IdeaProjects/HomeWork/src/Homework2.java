@@ -3,15 +3,14 @@ import java.util.Scanner;
 
 public class Homework2 {
     public static void main(String[] args) {
-        String[] arrayQuestons = {"1. Вопрос первый", "2. Вопрос второй", "3. Вопрос третий", "4. Вопрос четвертый"};
-        String[][] arrayVariant = {
-                {"1. Ответ +", "2. Ответ ++", "3. Ответ +++", "4. Ответ ++++"},
-                {"1. 2Ответ +", "2. О2твет ++", "3. 2Ответ +++", "4. 2Ответ ++++"},
-                {"1. 3Ответ +", "2. Ответ ++", "3. Ответ +++", "4. Ответ ++++"},
-                {"1. 4Ответ +", "2. Ответ ++", "3. Ответ +++", "4. Ответ ++++"}
+        String[] arrayQuestons = {"1. Где находится Биг Бен?","2. Какая валюта используется в Японии?","3. Из чего делают стекло?","4. Какая кость в нашем теле самая длинная?"};
+        String[][] arrayVariant = {{"1. Лондон", "2. Париж", "3. Нъю-Йорк", "4. Москва"},
+                {"1. Японский доллар", "2. Иена", "3. Юань", "4. Лира"},
+                {"1. Камень", "2. Песок", "3. Стекольный порошок", "4. Пластик"},
+                {"1. Бедренная", "2. Берцовая", "3. Плечевая", "4. Лучевая"}
         };
         int[] arrayAnswer = new int[4];
-        int[] arrayCorrectAnswer = {1,1,1,1};
+        int[] arrayCorrectAnswer = {1,2,2,1};
         int countCorrectAnswer = 0;
         int countWrongAnswer = 0;
 
@@ -22,12 +21,12 @@ public class Homework2 {
 
         for (int i = 0; i < arrayQuestons.length; i++) {
             System.out.println(arrayQuestons[i]);
-            int k = 0;
+            int k = i;
             for (int j = 0; j < arrayVariant.length; j++) {
                 System.out.println(arrayVariant[k][j]);
             }
             k = scanner.nextInt();
-            if (k == arrayCorrectAnswer[k]) {
+            if (k == arrayCorrectAnswer[i]) {
                 countCorrectAnswer++;
             }
             else {
@@ -35,8 +34,8 @@ public class Homework2 {
             };
 
         }
-        System.out.println("Количество правильных ответов: "+countCorrectAnswer);
-        System.out.println("Количество неправильных ответов: "+countWrongAnswer);
+        System.out.println("Количество правильных ответов: " +countCorrectAnswer);
+        System.out.println("Количество неправильных ответов: " +countWrongAnswer);
       /*  for (int c = 0; c < 4; c++) {*/
       /*          System.out.println(arrayAnswer[c]);    }*/
     }
