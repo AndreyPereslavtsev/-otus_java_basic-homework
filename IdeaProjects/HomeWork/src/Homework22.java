@@ -17,7 +17,7 @@ public class Homework22 {
         int [] arrayansw = new int[4];
         int [] arr = new int[4];
         int corans = 0;
-        int wronans = 0;
+        int wronans = 0; ///
 
         System.out.println("Ответь на 4 вопроса и узнай результат ");
 
